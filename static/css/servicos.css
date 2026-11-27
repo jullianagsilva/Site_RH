@@ -1,0 +1,25 @@
+/* Container exclusivo da página Serviços */
+main.servicos-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 40px;
+}
+
+/* Card de contato específico */
+.card-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Ajustes responsivos só da página */
+@media (max-width: 768px) {
+  main.servicos-container {
+    gap: 30px;
+  }
+}

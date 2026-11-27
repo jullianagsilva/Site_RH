@@ -1,0 +1,78 @@
+/* =====================================================
+   MAIN CONTAINER / CARDS
+===================================================== */
+main.cards-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 40px;
+}
+
+/* Cards individuais */
+.card h2 {
+  color: var(--cor-primaria);
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+.card p, .card ul {
+  color: var(--cor-texto);
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.card ul { list-style-type: disc; padding-left: 20px; }
+
+/* =====================================================
+   FORMULÁRIO DE CONTATO
+===================================================== */
+#contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contato-form input,
+#contato-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: 0.3s;
+  resize: none;
+}
+
+#contato-form input:focus,
+#contato-form textarea:focus {
+  border-color: var(--cor-primaria);
+  background: white;
+}
+
+#contato-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--cor-primaria);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#contato-form button:hover,
+#contato-form button:focus {
+  background: var(--cor-hover);
+  transform: translateY(-2px);
+}
+
+.feedback {
+  font-size: 0.95rem;
+  color: var(--cor-primaria);
+  display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main.cards-container { gap: 30px; }
+}

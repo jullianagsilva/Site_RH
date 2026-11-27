@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Fernanda Rodrigues</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Menu -->
+  <nav class="menu" aria-label="Menu principal">
+    <a href="index.html">Home</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+    <h1>Blog</h1>
+    <p>Conteúdos sobre carreira, ética e desenvolvimento profissional</p>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="blog-container">
+
+    <!-- Post 1 -->
+    <article class="card" tabindex="0">
+      <h2>Como se preparar para entrevistas usando psicologia comportamental</h2>
+      <p>Dicas práticas para entender o comportamento durante entrevistas, aumentar a confiança e causar uma ótima impressão nos recrutadores.</p>
+      <a href="#">Leia mais →</a>
+    </article>
+
+    <!-- Post 2 -->
+    <article class="card" tabindex="0">
+      <h2>O papel da ética nas relações de trabalho modernas</h2>
+      <p>Como a ética influencia o ambiente corporativo, melhora a colaboração e fortalece a confiança entre líderes e equipes.</p>
+      <a href="#">Leia mais →</a>
+    </article>
+
+    <!-- Post 3 -->
+    <article class="card" tabindex="0">
+      <h2>Como construir um currículo que realmente chama atenção</h2>
+      <p>Estratégias para destacar competências e experiências de forma clara, objetiva e alinhada às expectativas do mercado.</p>
+      <a href="#">Leia mais →</a>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+   <!-- Footer -->
+  <footer class="footer">
+  <!-- Ícones de redes sociais -->
+  <div class="footer-social">
+    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/uainnanda" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/5562993667285" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/fernnanda-rodrigues" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+
+  <p>© 2025 Fernanda Rodrigues. Todos os direitos reservados.</p>
+</footer>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
+
+  <!-- Script de animação dos cards -->
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>

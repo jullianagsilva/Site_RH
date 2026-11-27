@@ -1,0 +1,135 @@
+/* =====================================================
+   HEADER / HERO
+===================================================== */
+header {
+  background-image: url("https://i.postimg.cc/TwVxS7hG/fundo.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+header .header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 2.8rem;
+}
+
+header p {
+  font-size: 1.4rem;
+}
+
+/* =====================================================
+   PERFIL / SOBRE
+===================================================== */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--cor-primaria);
+}
+
+.profile div {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* =====================================================
+   SERVIÇOS / CARDS (GRID PRINCIPAL)
+===================================================== */
+.servicos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* =====================================================
+   CARD DE CONTATO (ALINHADO AO GRID)
+===================================================== */
+.card-contato {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  padding: 50px 30px;
+  background: #fff;
+}
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+@media (max-width: 1024px) {
+  .servicos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-contato {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .servicos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-contato {
+    grid-column: span 1;
+  }
+}
+
